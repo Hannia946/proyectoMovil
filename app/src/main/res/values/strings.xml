@@ -7,15 +7,29 @@
     <string name="op_inicio_cliente">Inicio</string>
 
 
+    <!---NavigationDrawer Repartidor-->
+    <string name="op_inicio_repartidor">Inicio</string>
+    <string name="op_pendientes_repartidor">Pendientes</string>
+    <string name="op_notificar_repartidor">Notificar</string>
+    <string name="op_cerrarSesion_repartidor">Cerrar sesión</string>
+
+
     <string name="op_cerrarSesion_cliente">Cerrar Sesión</string>
+
 
     <!---Bottom NavigationBar Cliente-->
     <string name="op_registro_cliente">Registrar Envío</string>
     <string name="op_historial_cliente">Historial de Envíos</string>
     <string name="op_calificar_cliente">Calificar Envío</string>
 
+
+
     <!---Nav header Cliente-->
     <string name="bienvenida">Bienvenido</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+
 </resources>
