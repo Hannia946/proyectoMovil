@@ -35,7 +35,7 @@ class FragmentRegistroEnvioCliente : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro_envio_cliente2, container, false)
+        return inflater.inflate(R.layout.fragment_registro_envio_cliente, container, false)
     }
 
     companion object {
