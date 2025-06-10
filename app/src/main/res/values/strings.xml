@@ -7,7 +7,6 @@
     <string name="op_inicio_cliente">Inicio</string>
     <string name="op_cerrarSesion_cliente">Cerrar Sesión</string>
 
-
     <!---NavigationDrawer Repartidor-->
     <string name="op_inicio_repartidor">Inicio</string>
     <string name="op_pendientes_repartidor">Pendientes</string>
