@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.proyecto.R
+import com.example.proyecto.cliente.bottom_nav_fragments_cliente.FragmentCalificarCliente
 import com.example.proyecto.cliente.bottom_nav_fragments_cliente.FragmentHistorialEnviosCliente
+import com.example.proyecto.cliente.bottom_nav_fragments_cliente.FragmentRegistroEnvioCliente
 import com.example.proyecto.databinding.FragmentInicioClienteBinding
 
 class FragmentInicioCliente : Fragment() {
@@ -21,13 +23,13 @@ class FragmentInicioCliente : Fragment() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.op_registro_cliente->{
-
+                    replaceFragment(FragmentRegistroEnvioCliente())
                 }
                 R.id.op_historial_cliente->{
-
+                    replaceFragment(FragmentHistorialEnviosCliente())
                 }
                 R.id.op_calificar_cliente->{
-
+                    replaceFragment(FragmentCalificarCliente())
                 }
             }
             true
