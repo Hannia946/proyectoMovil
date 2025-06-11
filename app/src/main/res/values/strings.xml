@@ -40,5 +40,10 @@
     <string name="etCPassword">Confirmar password</string>
     <string name="btnRegistrarC">Registrarme</string>
 
+    <!---Tipos de usuarios-->
+    <string name="tipoCliente">Soy Cliente</string>
+    <string name="tipoRepartidor">Soy Repartidor</string>
+    <string name="tipoAdmin">Soy Administrador</string>
+
 
 </resources>
