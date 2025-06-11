@@ -7,17 +7,11 @@
     <string name="op_inicio_cliente">Inicio</string>
     <string name="op_cerrarSesion_cliente">Cerrar Sesión</string>
 
-    <!---NavigationDrawer Repartidor-->
-    <string name="op_inicio_repartidor">Inicio</string>
-    <string name="op_pendientes_repartidor">Pendientes</string>
-    <string name="op_notificar_repartidor">Notificar</string>
-    <string name="op_cerrarSesion_repartidor">Cerrar sesión</string>
 
     <!---Bottom NavigationBar Cliente-->
     <string name="op_registro_cliente">Registrar Envío</string>
     <string name="op_historial_cliente">Historial de Envíos</string>
     <string name="op_calificar_cliente">Calificar Envío</string>
-
 
 
     <!---Nav header Cliente-->
@@ -26,6 +20,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <!---NavigationDrawer Repartidor-->
+    <string name="op_inicio_repartidor">Inicio</string>
+    <string name="op_pendientes_repartidor">Pendientes</string>
+    <string name="op_notificar_repartidor">Notificar</string>
+    <string name="op_cerrarSesion_repartidor">Cerrar sesión</string>
 
+    <!---Bottom NavigationBar Repartidor-->
+    <string name="op_mispendientes_repartidor">Pendientes</string>
+    <string name="op_misnotificaciones_repartidor">Notificar</string>
 
 </resources>
