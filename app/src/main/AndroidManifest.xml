@@ -30,6 +30,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity android:name=".cliente.LoginClienteActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
