@@ -33,6 +33,14 @@
     <string name="etPassword">Password</string>
     <string name="txtNoCuenta">¿No tienes cuenta?</string>
 
+    <!---Registro Cliente-->
+    <string name="txtRegistroC">Registro de cliente</string>
+    <string name="etNombresC">Nombre(s)</string>
+    <string name="etApellidosC">Apellido(s)</string>
+    <string name="etTelefonoC">Teléfono</string>
+    <string name="etCPassword">Confirmar password</string>
+    <string name="btnRegistrarC">Registrarme</string>
+
 
 
 
