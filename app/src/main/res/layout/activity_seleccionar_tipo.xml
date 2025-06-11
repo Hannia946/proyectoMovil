@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeleccionarTipoActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/client"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tipoCliente"
+            android:id="@+id/tipoCliente"
+            app:cornerRadius="8dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/repartidor"
+            android:layout_marginTop="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tipoRepartidor"
+            android:id="@+id/tipoRepartidor"
+            app:cornerRadius="8dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/admin"
+            android:layout_marginTop="15dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tipoAdmin"
+            android:id="@+id/tipoAdmin"
+            app:cornerRadius="8dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>
