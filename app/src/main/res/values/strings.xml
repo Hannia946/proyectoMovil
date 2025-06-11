@@ -19,7 +19,6 @@
     <string name="op_calificar_cliente">Calificar Envío</string>
 
 
-
     <!---Nav header Cliente-->
     <string name="bienvenida">Bienvenido</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -40,8 +39,6 @@
     <string name="etTelefonoC">Teléfono</string>
     <string name="etCPassword">Confirmar password</string>
     <string name="btnRegistrarC">Registrarme</string>
-
-
 
 
 </resources>
