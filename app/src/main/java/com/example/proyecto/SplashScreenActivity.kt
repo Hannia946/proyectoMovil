@@ -25,7 +25,7 @@ class SplashScreenActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                startActivity(Intent(applicationContext, MainActivity::class.java))
+                startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
                 finishAffinity()
             }
 
