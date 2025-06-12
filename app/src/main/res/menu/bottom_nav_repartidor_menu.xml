@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+<!-- Pendientes-->
+    <item
+        android:id="@+id/op_mispendientes_repartidor"
+        android:title="@string/op_mispendientes_repartidor"
+        android:icon="@drawable/pendientes"
+        />
+
+    <!-- Notificaciones -->
+    <item
+        android:id="@+id/op_op_misnotificaciones_repartidor"
+        android:title="@string/op_misnotificaciones_repartidor"
+        android:icon="@drawable/notificacion"
+        />
+
 </menu>
