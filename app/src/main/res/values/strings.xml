@@ -2,25 +2,21 @@
     <string name="app_name">Envíos Rápidos MX</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
-  
+
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
     <string name="op_misnotificaciones_repartidor">Notificar</string>
-  
+
     <!---NavigationDrawer Repartidor-->
     <string name="op_inicio_repartidor">Inicio</string>
     <string name="op_pendientes_repartidor">Pendientes</string>
     <string name="op_notificar_repartidor">Notificar</string>
     <string name="op_cerrarSesion_repartidor">Cerrar sesión</string>
     <string name="fab_add_description">Agregar nuevo elemento</string>
-  
-  
-  
-  
-  <!---División de REPARTIDOR Y CLIENTE-->
- 
-  
-  
+
+
+    <!---División de REPARTIDOR Y CLIENTE-->
+
 
     <!---NavigationDrawer Cliente-->
     <string name="op_inicio_cliente">Inicio</string>
@@ -37,7 +33,7 @@
     <string name="bienvenida">Bienvenido</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-  
+
     <!---Login Cliente-->
     <string name="txtLoginC">Login de Cliente</string>
     <string name="btnLoginC">Ingresar</string>
@@ -59,6 +55,5 @@
     <string name="tipoRepartidor">Soy Repartidor</string>
     <string name="tipoAdmin">Soy Administrador</string>
 
-    
 
 </resources>
