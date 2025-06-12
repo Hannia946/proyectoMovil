@@ -287,54 +287,85 @@
             android:gravity="start|top"
             android:inputType="textMultiLine" />
 
-        <!--Spinner para cantidad de piezas-->
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/SpinnerQtyPzas"
-            android:layout_width="50dp"
-            android:layout_height="48dp"/>
-
-        <!--Ancho-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="80dp"
+        <!--Cantidad de piezas y peso-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start">
-            <EditText
-                android:id="@+id/etAncho"
-                android:hint="@string/etAncho"
-                android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:weightSum="2">
 
-        <!--Largo-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="80dp"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/etLargo"
-                android:hint="@string/etLargo"
-                android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            <!--Spinner para cantidad de piezas-->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/SpinnerQtyPzas"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
-        <!--Alto-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="80dp"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/etAlto"
-                android:hint="@string/etAlto"
-                android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            <!--Spinner para peso-->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/SpinnerPeso"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
-        <!--Spinner para peso-->
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/SpinnerPeso"
-            android:layout_width="50dp"
-            android:layout_height="48dp"/>
+        <!--Ancho, largo y alto de paquete-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:weightSum="3">
+
+            <!--Ancho-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp">
+                <EditText
+                    android:id="@+id/etAncho"
+                    android:hint="@string/etAncho"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Largo-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp">
+                <EditText
+                    android:id="@+id/etLargo"
+                    android:hint="@string/etLargo"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Alto-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp">
+                <EditText
+                    android:id="@+id/etAlto"
+                    android:hint="@string/etAlto"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
         <!--Botón de registrar envío-->
         <com.google.android.material.button.MaterialButton
