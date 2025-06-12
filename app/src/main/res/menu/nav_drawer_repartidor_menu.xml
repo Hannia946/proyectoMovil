@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
 
+    tools:showIn="navigation_view">
+
+<group>
+
+    <item
+        android:id="@+id/op_inicio_repartidor"
+        android:title="@string/op_inicio_repartidor"
+        android:icon="@drawable/home"
+        />
+
+
+    <item
+        android:id="@+id/op_pendientes_repartidor"
+        android:title="@string/op_pendientes_repartidor"
+        android:icon="@drawable/pendientes"
+        />
+
+    <item
+        android:id="@+id/op_notificar_repartidor"
+        android:title="@string/op_notificar_repartidor"
+        android:icon="@drawable/notificacion"
+        />
+
+
+</group>
+
+    <item
+        android:id="@+id/op_cerrarSesion_repartidor"
+        android:title="@string/op_cerrarSesion_repartidor"
+        android:icon="@drawable/exit"
+        />
 </menu>
