@@ -59,6 +59,34 @@
     <string name="tipoRepartidor">Soy Repartidor</string>
     <string name="tipoAdmin">Soy Administrador</string>
 
+    <!---Fragment para registro de un envío-->
+    <string name="titulo_registroEnvio">Registrar envío nuevo</string>
+    <string name="datosCliente">Datos del remitente</string>
+
+    <string name="etNombreCompletoR">Nombre Completo</string>
+    <!--<string name="etTelefonoC">Teléfono</string>-->
+    <!--<string name="etEmail">Email</string>-->
+
+    <string name="datosRecoleccion">Datos de Recolección</string>
+    <string name="etCalleR">Calle</string>
+    <string name="etNoCasaR">No.</string>
+    <string name="etColoniaR">Colonia</string>
+    <string name="etEstadoR">Estado</string>
+    <string name="etCodigoPostalR">Código Postal</string>
+
+    <string name="datosDestinatario">Datos del Destinatario</string>
+    <string name="etCalleD">Calle</string>
+    <string name="etNoCasaD">No.</string>
+    <string name="etColoniaD">Colonia</string>
+    <string name="etEstadoD">Estado</string>
+    <string name="etCodigoPostalD">Código Postal</string>
+
+    <string name="datosPaquete">Datos del Paquete</string>
+    <string name="etDescripcionContenido">Descripción del contenido</string>
+    <string name="etQtyPiezas">Cantidad de piezas</string>
+    <string name="etDimensiones">Dimensiones</string>
+    <string name="etPeso">Peso</string>
+
     
 
 </resources>
