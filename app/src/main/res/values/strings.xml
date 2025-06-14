@@ -4,7 +4,6 @@
     <string name="close_drawer">Close drawer</string>
 
 
-
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
     <string name="op_misnotificaciones_repartidor">Notificar</string>
@@ -31,6 +30,8 @@
     <string name="etTelefonoR">Teléfono</string>
     <string name="etRPassword">Confirmar password</string>
     <string name="btnRegistrarR">Registrarme</string>
+
+
 
 
 
@@ -81,6 +82,28 @@
     <string name="tipoCliente">Soy Cliente</string>
     <string name="tipoRepartidor">Soy Repartidor</string>
     <string name="tipoAdmin">Soy Administrador</string>
+
+
+
+
+
+
+
+
+
+
+    <!---División de REPARTIDOR - CLIENTE - ADMINISTRADOR-->
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>

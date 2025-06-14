@@ -37,8 +37,25 @@ class MainActivityRepartidor : AppCompatActivity(), NavigationView.OnNavigationI
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        replaceFragment(FragmentInicioRepartidor())
+        binding.navigationView.setCheckedItem(R.id.op_inicio_repartidor)
+
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {

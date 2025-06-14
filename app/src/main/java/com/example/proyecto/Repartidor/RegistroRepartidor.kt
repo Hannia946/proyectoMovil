@@ -1,86 +1,60 @@
 package com.example.proyecto.Repartidor
 
-import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
-import android.util.Patterns
-import androidx.activity.enableEdgeToEdge
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.proyecto.R
-import com.example.proyecto.databinding.ActivityRegistroRepartidorBinding
-import org.intellij.lang.annotations.Pattern
 
 class RegistroRepartidor : AppCompatActivity() {
 
-
-    private lateinit var binding: ActivityRegistroRepartidorBinding
-
-    //private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var progressDialog: ProgressDialog
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        binding = ActivityRegistroRepartidorBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
 
+        setContentView(R.layout.activity_registro_repartidor)
 
-        progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Espere por favor")
-        progressDialog.setCanceledOnTouchOutside(false)
+        val nombre = findViewById<EditText>(R.id.etNombresR)
+        val apellido = findViewById<EditText>(R.id.etApellidosR)
+        val telefono = findViewById<EditText>(R.id.etTelefonoR)
+        val email = findViewById<EditText>(R.id.etEmailR)
+        val password = findViewById<EditText>(R.id.etPasswordR)
+        val rPassword = findViewById<EditText>(R.id.etRPassword)
+        val botonRegistrar = findViewById<com.google.android.material.button.MaterialButton>(R.id.btnRegistrarR)
 
-        binding.btnRegistrarR.setOnClickListener {
-            validarInformacion()
+        val sharedPreferences = getSharedPreferences("RepartidorPrefs", MODE_PRIVATE)
+
+        botonRegistrar.setOnClickListener {
+            val nom = nombre.text.toString().trim()
+            val ape = apellido.text.toString().trim()
+            val tel = telefono.text.toString().trim()
+            val mail = email.text.toString().trim()
+            val pass = password.text.toString()
+            val rpass = rPassword.text.toString()
+
+            if (nom.isEmpty() || ape.isEmpty() || tel.isEmpty() || mail.isEmpty() || pass.isEmpty() || rpass.isEmpty()) {
+                Toast.makeText(this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (pass != rpass) {
+                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Guardar los datos
+            val editor = sharedPreferences.edit()
+            editor.putString("email", mail)
+            editor.putString("password", pass)
+            editor.apply()
+
+            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, LoginRepartidor::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
         }
-    }
-
-    private var nombresR = ""
-    private var emailR = ""
-    private var passwordR = ""
-    private var Rpassword = ""
-
-    private fun validarInformacion() {
-        nombresR = binding.etNombresR.text.toString().trim()
-        emailR = binding.etEmailR.text.toString().trim()
-        passwordR = binding.etPasswordR.text.toString().trim()
-        Rpassword = binding.etRPassword.text.toString().trim()
-
-        if (nombresR.isEmpty()){
-            binding.etNombresR.error = "Ingrese sus nombres"
-            binding.etNombresR.requestFocus()
-
-        }else if(emailR.isEmpty()){
-            binding.etEmailR.error = "Ingrese email"
-            binding.etEmailR.requestFocus()
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(emailR).matches()){
-            binding.etEmailR.error = "Email no valido"
-            binding.etEmailR.requestFocus()
-        }else if (passwordR.isEmpty()){
-            binding.etPasswordR.error = "Ingrese password"
-            binding.etPasswordR.requestFocus()
-        }else if (passwordR.length >=6){
-            binding.etPasswordR.error = "Necesita 6 o mas car."
-            binding.etPasswordR.requestFocus()
-        }else if (Rpassword.isEmpty()) {
-            binding.etRPassword.error = "Confirme password"
-            binding.etRPassword.requestFocus()
-        }else if (passwordR!=Rpassword){
-            binding.etRPassword.error = "No coincide"
-            binding.etRPassword.requestFocus()
-        }else{
-            registrarRepartidor()
-        }
-
-    }
-
-    private fun registrarRepartidor() {
-
-
     }
 }
-
-
-
