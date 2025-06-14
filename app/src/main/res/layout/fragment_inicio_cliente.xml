@@ -23,7 +23,7 @@
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@android:color/transparent"
+            android:backgroundTint="@color/orange"
             app:elevation="0dp"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/bottom_nav_var_cliente_menu"/>

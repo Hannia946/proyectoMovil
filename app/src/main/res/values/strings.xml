@@ -4,11 +4,11 @@
     <string name="close_drawer">Close drawer</string>
 
     <!---STRINGS DE REPARTIDOR-->
-  
+
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
     <string name="op_misnotificaciones_repartidor">Notificar</string>
-  
+
     <!---NavigationDrawer Repartidor-->
     <string name="op_inicio_repartidor">Inicio</string>
     <string name="op_pendientes_repartidor">Pendientes</string>
@@ -99,9 +99,6 @@
     <string name="btnRegistrarEnvio">Registrar Envío</string>
 
     <!---STRINGS DE ADMINISTRADOR-->
-
-
-
 
 
 </resources>
