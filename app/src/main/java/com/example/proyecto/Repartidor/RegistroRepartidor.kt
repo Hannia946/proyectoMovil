@@ -43,7 +43,7 @@ class RegistroRepartidor : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Guardar los datos
+            //Guardar los datos
             val editor = sharedPreferences.edit()
             editor.putString("email", mail)
             editor.putString("password", pass)

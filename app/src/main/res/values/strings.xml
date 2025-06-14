@@ -32,17 +32,6 @@
     <string name="btnRegistrarR">Registrarme</string>
 
 
-
-
-
-
-
-
-
-
-
-
-
     <!---División de REPARTIDOR Y CLIENTE-->
 
 
@@ -84,26 +73,7 @@
     <string name="tipoAdmin">Soy Administrador</string>
 
 
-
-
-
-
-
-
-
-
     <!---División de REPARTIDOR - CLIENTE - ADMINISTRADOR-->
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>
