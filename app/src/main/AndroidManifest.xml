@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
         <activity
+            android:name=".Repartidor.RepartidorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".administrador.MainActivityAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".Repartidor.RegistroRepartidor"
+            android:exported="false" />
+        <activity
+            android:name=".Repartidor.LoginRepartidor"
+            android:exported="false" />
+        <activity
             android:name=".SeleccionarTipoActivity"
             android:exported="false" />
         <activity
@@ -30,8 +42,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity android:name=".cliente.LoginClienteActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".cliente.LoginClienteActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
