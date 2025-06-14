@@ -40,18 +40,19 @@ class MainActivityRepartidor : AppCompatActivity(), NavigationView.OnNavigationI
         binding.navigationView.setNavigationItemSelectedListener(this)
 
         replaceFragment(FragmentInicioRepartidor())
-        binding.navigationView.setCheckedItem(R.id.op_inicio_repartidor)
     }
 
 
     
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.op_inicio_repartidor -> {
-                replaceFragment(FragmentInicioRepartidor())
-            }
+
             R.id.op_cerrarSesion_repartidor -> {
                 Toast.makeText(this, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, SeleccionarTipoActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
 
             }
             else -> {

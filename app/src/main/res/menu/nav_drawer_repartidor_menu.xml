@@ -7,11 +7,6 @@
 <group>
 
 
-    <item
-        android:id="@+id/op_inicio_repartidor"
-        android:title="@string/op_inicio_repartidor"
-        android:icon="@drawable/home"
-        />
 
 </group>
 
