@@ -15,7 +15,7 @@
         android:padding="15dp">
 
         <TextView
-            android:text="@string/txtLoginC"
+            android:text="@string/txtLoginR"
             android:layout_gravity="center"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -35,8 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/etEmail"
-                android:hint="@string/etEmail"
+                android:id="@+id/etEmailR"
+                android:hint="@string/etEmailR"
                 android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/email"
                 android:drawablePadding="5dp"
@@ -51,8 +51,8 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
             <EditText
-                android:id="@+id/etPassword"
-                android:hint="@string/etPassword"
+                android:id="@+id/etPasswordR"
+                android:hint="@string/etPasswordR"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/password"
                 android:drawablePadding="5dp"
@@ -62,8 +62,8 @@
 
         <!--Boton ingresar-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLoginC"
-            android:text="@string/btnLoginC"
+            android:id="@+id/btnLoginR"
+            android:text="@string/btnLoginR"
             android:textAllCaps="true"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:text="@string/txtNoCuenta"
+            android:text="@string/txtNoCuentaR"
             android:layout_gravity="end"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
@@ -80,11 +80,11 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tvRegistrarC"
+            android:id="@+id/tvRegistrarR"
             android:textSize="17sp"
             android:textStyle="bold"
             android:textColor="@color/orange"
-            android:text="@string/tvRegistrarC"
+            android:text="@string/tvRegistrarR"
             android:layout_gravity="end"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"

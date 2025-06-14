@@ -23,7 +23,6 @@ class SplashScreenActivity : AppCompatActivity() {
             override fun onTick(millisUntilFinished: Long) {
 
             }
-
             override fun onFinish() {
                 startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
                 finishAffinity()

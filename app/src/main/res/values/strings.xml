@@ -3,6 +3,8 @@
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
 
+
+
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
     <string name="op_misnotificaciones_repartidor">Notificar</string>
@@ -13,6 +15,31 @@
     <string name="op_notificar_repartidor">Notificar</string>
     <string name="op_cerrarSesion_repartidor">Cerrar sesión</string>
     <string name="fab_add_description">Agregar nuevo elemento</string>
+
+    <!---Login Repartidor-->
+    <string name="txtLoginR">Login de Repartidor</string>
+    <string name="btnLoginR">Ingresar</string>
+    <string name="tvRegistrarR">Registrarme</string>
+    <string name="etEmailR">Email</string>
+    <string name="etPasswordR">Password</string>
+    <string name="txtNoCuentaR">¿No tienes cuenta?</string>
+
+    <!---Registro Repartidor-->
+    <string name="txtRegistroR">Registro de Repartidor</string>
+    <string name="etNombresR">Nombre(s)</string>
+    <string name="etApellidosR">Apellido(s)</string>
+    <string name="etTelefonoR">Teléfono</string>
+    <string name="etRPassword">Confirmar password</string>
+    <string name="btnRegistrarR">Registrarme</string>
+
+
+
+
+
+
+
+
+
 
 
     <!---División de REPARTIDOR Y CLIENTE-->

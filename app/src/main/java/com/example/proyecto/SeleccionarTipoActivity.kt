@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto.cliente.LoginClienteActivity
 import com.example.proyecto.databinding.ActivitySeleccionarTipoBinding
+import com.example.proyecto.Repartidor.LoginRepartidor
 
 
 class SeleccionarTipoActivity : AppCompatActivity() {
@@ -19,9 +20,9 @@ class SeleccionarTipoActivity : AppCompatActivity() {
             startActivity(Intent(this@SeleccionarTipoActivity, LoginClienteActivity::class.java))
         }
 
-        /*binding.tipoRepartidor.setOnClickListener{
-            startActivity(Intent(this@SeleccionarTipoActivity, LoginRepartidorActivity::class.java))
-        }*/
+        binding.tipoRepartidor.setOnClickListener{
+            startActivity(Intent(this@SeleccionarTipoActivity, LoginRepartidor::class.java))
+        }
 
         /*binding.tipoAdmin.setOnClickListener{
             startActivity(Intent(this@SeleccionarTipoActivity, LoginAdminActivity::class.java))
