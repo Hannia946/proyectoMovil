@@ -2,6 +2,8 @@
     <string name="app_name">Envíos Rápidos MX</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
+
+    <!---STRINGS DE REPARTIDOR-->
   
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
@@ -13,14 +15,26 @@
     <string name="op_notificar_repartidor">Notificar</string>
     <string name="op_cerrarSesion_repartidor">Cerrar sesión</string>
     <string name="fab_add_description">Agregar nuevo elemento</string>
-  
-  
-  
-  
-  <!---División de REPARTIDOR Y CLIENTE-->
- 
-  
-  
+
+    <!---Login Repartidor-->
+    <string name="txtLoginR">Login de Repartidor</string>
+    <string name="btnLoginR">Ingresar</string>
+    <string name="tvRegistrarR">Registrarme</string>
+    <string name="etEmailR">Email</string>
+    <string name="etPasswordR">Password</string>
+    <string name="txtNoCuentaR">¿No tienes cuenta?</string>
+
+    <!---Registro Repartidor-->
+    <string name="txtRegistroR">Registro de Repartidor</string>
+    <string name="etNombresR">Nombre(s)</string>
+    <string name="etApellidosR">Apellido(s)</string>
+    <string name="etTelefonoR">Teléfono</string>
+    <string name="etRPassword">Confirmar password</string>
+    <string name="btnRegistrarR">Registrarme</string>
+
+
+    <!---STRINGS DE CLIENTE-->
+
 
     <!---NavigationDrawer Cliente-->
     <string name="op_inicio_cliente">Inicio</string>
@@ -32,12 +46,11 @@
     <string name="op_historial_cliente">Historial de Envíos</string>
     <string name="op_calificar_cliente">Calificar Envío</string>
 
-
     <!---Nav header Cliente-->
     <string name="bienvenida">Bienvenido</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-  
+
     <!---Login Cliente-->
     <string name="txtLoginC">Login de Cliente</string>
     <string name="btnLoginC">Ingresar</string>
@@ -85,6 +98,10 @@
     <string name="etPeso">Peso</string>
     <string name="btnRegistrarEnvio">Registrar Envío</string>
 
-    
+    <!---STRINGS DE ADMINISTRADOR-->
+
+
+
+
 
 </resources>
