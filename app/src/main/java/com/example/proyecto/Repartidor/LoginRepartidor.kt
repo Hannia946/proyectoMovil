@@ -1,5 +1,6 @@
 package com.example.proyecto.Repartidor
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -30,7 +31,7 @@ class LoginRepartidor : AppCompatActivity() {
 
             if (email == savedEmail && password == savedPassword) {
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, RepartidorHomeActivity::class.java)
+                val intent = Intent(this, MainActivityRepartidor::class.java)
                 startActivity(intent)
                 finish()
             } else {
