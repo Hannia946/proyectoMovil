@@ -1,5 +1,6 @@
 package com.example.proyecto.cliente
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.proyecto.R
+import com.example.proyecto.SeleccionarTipoActivity
 import com.example.proyecto.cliente.nav_fragments_cliente.FragmentInicioCliente
 import com.example.proyecto.databinding.ActivityMainClienteBinding
 import com.google.android.material.navigation.NavigationView
@@ -52,6 +54,10 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
             }*/
             R.id.op_cerrarSesion_cliente->{
                 Toast.makeText(applicationContext, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, SeleccionarTipoActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
             }
 
         }

@@ -1,0 +1,29 @@
+package com.example.proyecto
+
+class Envio(
+    id: Int,
+    nombreRemitente: String,
+    apellidoRemitente: String,
+    telefonoRemitente: String,
+    emailRemitente: String,
+    calleRemitente: String,
+    noRemitente: String,
+    coloniaRemitente: String,
+    estadoRemitente: String,
+    codigoPostalRemitente: String,
+    nombreDestinatario: String,
+    apellidoDestinatario: String,
+    telefonoDestinatario: String,
+    emailDestinatario: String,
+    calleDestinatario: String,
+    noDestinatario: String,
+    coloniaDestinatario: String,
+    estadoDestinatario: String,
+    codigoPostalDestinatario: String,
+    descripcion: String,
+    peso: String,
+    piezas: String,
+    Ancho: String,
+    Largo: String,
+    Alto: String
+)
