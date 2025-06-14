@@ -8,10 +8,7 @@
     <group
         android:id="@+id/grupo_op"
         android:checkableBehavior="single">
-        <item
-            android:id="@+id/op_inicio_cliente"
-            android:title="@string/op_inicio_cliente"
-            android:icon="@drawable/home"/>
+
         <item
             android:id="@+id/op_cerrarSesion_cliente"
             android:title="@string/op_cerrarSesion_cliente"

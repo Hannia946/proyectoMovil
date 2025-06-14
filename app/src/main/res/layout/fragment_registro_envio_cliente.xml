@@ -37,7 +37,7 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:paddingTop="15dp"/>
-        <!--Nombre Completo-->
+        <!--Nombre(s)-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -45,6 +45,20 @@
             <EditText
                 android:id="@+id/etNombreCompletoR"
                 android:hint="@string/etNombreCompleto"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Apellido(s)-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etApellidosR"
+                android:hint="@string/etApellidosR"
                 android:inputType="textPersonName|textCapWords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -154,7 +168,7 @@
             android:textSize="18sp"
             android:paddingTop="15dp"/>
 
-        <!--Nombre Completo-->
+        <!--Nombre(S)-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -162,6 +176,20 @@
             <EditText
                 android:id="@+id/etNombreCompletoD"
                 android:hint="@string/etNombreCompleto"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Apellido(s)-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etApellidoD"
+                android:hint="@string/etApellidosR"
                 android:inputType="textPersonName|textCapWords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -375,6 +403,15 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?android:attr/listDivider" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

@@ -55,5 +55,8 @@ class RegistroClienteActivity : AppCompatActivity() {
             finish()
 
         }
+
+
+
     }
 }
