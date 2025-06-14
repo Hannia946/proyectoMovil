@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyecto.Datos
 import com.example.proyecto.EnvioAdapter
-import com.example.proyecto.cliente.EnvioAdapter
 import com.example.proyecto.databinding.FragmentHistorialEnviosClienteBinding
 
 class FragmentHistorialEnviosCliente : Fragment() {

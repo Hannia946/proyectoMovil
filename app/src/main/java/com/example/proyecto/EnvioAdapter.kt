@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto.databinding.ItemEnvioBinding
 import com.example.proyecto.Envio
 
-class EnvioAdapter(private val listaEnvios: List<Envio>) : RecyclerView.Adapter<EnvioAdapter.EnvioViewHolder>() {
+class EnvioAdapter(private val listaEnvios: MutableList<Envio>) : RecyclerView.Adapter<EnvioAdapter.EnvioViewHolder>() {
 
     inner class EnvioViewHolder(val binding: ItemEnvioBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -18,7 +18,7 @@ class EnvioAdapter(private val listaEnvios: List<Envio>) : RecyclerView.Adapter<
     override fun onBindViewHolder(holder: EnvioViewHolder, position: Int) {
         val envio = listaEnvios[position]
         with(holder.binding) {
-            tvIdEnvio.text = "ID: ${envio.id}"
+            tvIdEnvio.text= "ID: ${envio.id}"
             tvRemitente.text = "Remitente: ${envio.nombreRemitente} ${envio.apellidoRemitente}"
             tvDestinatario.text = "Destinatario: ${envio.nombreDestinatario} ${envio.apellidoDestinatario}"
             tvDireccionOrigen.text = "Origen: ${envio.calleRemitente} ${envio.noRemitente}, ${envio.coloniaRemitente}, ${envio.estadoRemitente}"
