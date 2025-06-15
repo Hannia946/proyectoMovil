@@ -20,6 +20,7 @@ class EnvioAdapter(private val contexto: Context, private val listaEnvios: Mutab
     override fun onBindViewHolder(holder: EnvioViewHolder, position: Int) {
         val envio = listaEnvios[position]
         with(holder.binding) {
+
             tvIdEnvio.text= "ID: ${envio.id}"
             tvRemitente.text = "Remitente: ${envio.nombreRemitente} ${envio.apellidoRemitente}"
             tvDestinatario.text = "Destinatario: ${envio.nombreDestinatario} ${envio.apellidoDestinatario}"
@@ -37,6 +38,7 @@ class EnvioAdapter(private val contexto: Context, private val listaEnvios: Mutab
             putExtra("no", envio.noRemitente)
             putExtra("colonia", envio.coloniaRemitente)
             putExtra("estado", envio.estadoRemitente)
+
 
             putExtra("calleD", envio.calleDestinatario)
             putExtra("noD", envio.noDestinatario)

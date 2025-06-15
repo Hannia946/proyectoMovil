@@ -8,53 +8,53 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="231dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tvIdEnvioT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="ID: #"
-            android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvRemitente"
+            android:text="Remitente: Nombre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remitente: Nombre" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvDestinatario"
+            android:text="Destinatario: Nombre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Destinatario: Nombre" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvDireccionOrigen"
+            android:text="Origen: Dirección completa"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Origen: Dirección completa" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvDireccionDestino"
+            android:text="Destino: Dirección completa"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Destino: Dirección completa" />
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginTop="15dp">
 
             <ImageButton
                 android:id="@+id/btnEntregado"
                 android:layout_width="51dp"
-                android:layout_height="wrap_content"
+                android:layout_height="54dp"
                 android:background="@null"
                 android:contentDescription="Entregado"
                 android:padding="4dp"
@@ -64,7 +64,7 @@
             <ImageButton
                 android:id="@+id/btnNoEntregado"
                 android:layout_width="55dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
                 android:background="@null"
                 android:contentDescription="No Entregado"
@@ -72,14 +72,6 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/cerrar" />
         </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerHistorial"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp" />
-
-
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

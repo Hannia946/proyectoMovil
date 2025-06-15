@@ -1,6 +1,7 @@
 package com.example.proyecto
 
 class Envio(
+
     var id: Int,
     var nombreRemitente: String,
     var apellidoRemitente: String,
@@ -25,5 +26,7 @@ class Envio(
     var piezas: String,
     var Ancho: String,
     var Largo: String,
-    var Alto: String
+    var Alto: String,
+    var entregado: Boolean = false,
+    var noEntregado: Boolean = false
 )
