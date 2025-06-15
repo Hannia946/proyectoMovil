@@ -46,70 +46,74 @@ class FragmentRegistroEnvioCliente : Fragment() {
         binding.SpinnerQtyPzas.adapter = adapterPiezas
 
         binding.btnRegistrarEnvio.setOnClickListener {
-            val rNombre = binding.etNombreCompletoR.text.toString()
-            val rApellido = binding.etApellidosR.text.toString()
-            val rTel = binding.etTelefonoR.text.toString()
-            val rEmail = binding.etEmailR.text.toString()
-            val rCalle = binding.etCalleR.text.toString()
-            val rNo = binding.etNoCasaR.text.toString()
-            val rColonia = binding.etColoniaR.text.toString()
-            val rEstado = binding.etEstadoR.text.toString()
-            val rCP = binding.etCodigoPostalR.text.toString()
-
-            val dNombre = binding.etNombreCompletoD.text.toString()
-            val dApellido = binding.etApellidoD.text.toString()
-            val dTel = binding.etTelefonoD.text.toString()
-            val dEmail = binding.etEmailD.text.toString()
-            val dCalle = binding.etCalleD.text.toString()
-            val dNo = binding.etNoCasaD.text.toString()
-            val dColonia = binding.etColoniaD.text.toString()
-            val dEstado = binding.etEstadoD.text.toString()
-            val dCP = binding.etCodigoPostalD.text.toString()
-
-            val descripcion = binding.etDescripcion.text.toString()
-            val peso = binding.SpinnerPeso.selectedItem.toString()
-            val piezas = binding.SpinnerQtyPzas.selectedItem.toString()
-            val ancho = binding.etAncho.text.toString()
-            val largo = binding.etLargo.text.toString()
-            val alto = binding.etAlto.text.toString()
-
-            if (rNombre.isBlank() || dNombre.isBlank() || descripcion.isBlank()) {
-                AlertDialog.Builder(requireContext())
-                    .setTitle("Campos Incompletos")
-                    .setMessage("Llena todos los campos obligatorios")
-                    .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
-                    .show()
-                return@setOnClickListener
-            }
-
-            // Mostrar ProgressBar
-            binding.progressBar.visibility = View.VISIBLE
-            binding.btnRegistrarEnvio.isEnabled = false
-
-            // Simular tiempo de procesamiento
-            Handler(Looper.getMainLooper()).postDelayed({
-                Datos.agregarSolicitud(
-                    rNombre, rApellido, rTel, rEmail, rCalle, rNo, rColonia, rEstado, rCP,
-                    dNombre, dApellido, dTel, dEmail, dCalle, dNo, dColonia, dEstado, dCP,
-                    descripcion, peso, piezas, ancho, largo, alto
-                )
-
-                // Ocultar ProgressBar
-                binding.progressBar.visibility = View.GONE
-                binding.btnRegistrarEnvio.isEnabled = true
-
-                AlertDialog.Builder(requireContext())
-                    .setTitle("Solicitud de envío")
-                    .setMessage("Solicitud enviada correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
-                    .show()
-
-                // Limpiar campos
-                limpiarCampos()
-
-            }, 1500) // 1.5 segundos
-
+            registrarEnvio()
         }
+    }
+
+    private fun registrarEnvio(){
+        val rNombre = binding.etNombreCompletoR.text.toString()
+        val rApellido = binding.etApellidosR.text.toString()
+        val rTel = binding.etTelefonoR.text.toString()
+        val rEmail = binding.etEmailR.text.toString()
+        val rCalle = binding.etCalleR.text.toString()
+        val rNo = binding.etNoCasaR.text.toString()
+        val rColonia = binding.etColoniaR.text.toString()
+        val rEstado = binding.etEstadoR.text.toString()
+        val rCP = binding.etCodigoPostalR.text.toString()
+
+        val dNombre = binding.etNombreCompletoD.text.toString()
+        val dApellido = binding.etApellidoD.text.toString()
+        val dTel = binding.etTelefonoD.text.toString()
+        val dEmail = binding.etEmailD.text.toString()
+        val dCalle = binding.etCalleD.text.toString()
+        val dNo = binding.etNoCasaD.text.toString()
+        val dColonia = binding.etColoniaD.text.toString()
+        val dEstado = binding.etEstadoD.text.toString()
+        val dCP = binding.etCodigoPostalD.text.toString()
+
+        val descripcion = binding.etDescripcion.text.toString()
+        val peso = binding.SpinnerPeso.selectedItem.toString()
+        val piezas = binding.SpinnerQtyPzas.selectedItem.toString()
+        val ancho = binding.etAncho.text.toString()
+        val largo = binding.etLargo.text.toString()
+        val alto = binding.etAlto.text.toString()
+
+        if (rNombre.isBlank() || dNombre.isBlank() || descripcion.isBlank()) {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Campos Incompletos")
+                .setMessage("Llena todos los campos obligatorios")
+                .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
+                .show()
+            //return@setOnClickListener
+        }
+
+        // Mostrar ProgressBar
+        binding.progressBar.visibility = View.VISIBLE
+        binding.btnRegistrarEnvio.isEnabled = false
+
+        // Simular tiempo de procesamiento
+        Handler(Looper.getMainLooper()).postDelayed({
+            Datos.agregarSolicitud(
+                rNombre, rApellido, rTel, rEmail, rCalle, rNo, rColonia, rEstado, rCP,
+                dNombre, dApellido, dTel, dEmail, dCalle, dNo, dColonia, dEstado, dCP,
+                descripcion, peso, piezas, ancho, largo, alto
+            )
+
+            // Ocultar ProgressBar
+            binding.progressBar.visibility = View.GONE
+            binding.btnRegistrarEnvio.isEnabled = true
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("Solicitud de envío")
+                .setMessage("Solicitud enviada correctamente")
+                .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
+                .show()
+
+            // Limpiar campos
+            limpiarCampos()
+
+        }, 1500) // 1.5 segundos
+
     }
 
     private fun limpiarCampos() {

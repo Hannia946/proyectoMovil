@@ -34,7 +34,7 @@ object Datos {
                 nombreRemitente = nombreRemitente ,
                 apellidoRemitente = apellidoRemitente,
                 telefonoRemitente = telefonoRemitente,
-                emailRemitente = telefonoRemitente,
+                emailRemitente = emailRemitente,
                 calleRemitente = calleRemitente,
                 noRemitente = noRemitente,
                 coloniaRemitente = coloniaRemitente,

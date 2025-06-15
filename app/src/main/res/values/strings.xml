@@ -35,11 +35,12 @@
     <!---Fragments de inicio del Repartidor-->
     <string name="img_repartidor_desc">Imagen del repartidor</string>
 
-  
-  
-  
-  
+
+
+
+
     <!---STRINGS DE CLIENTE-->
+
 
     <!---NavigationDrawer Cliente-->
     <string name="op_inicio_cliente">Inicio</string>
@@ -118,10 +119,18 @@
         <item>4</item>
     </string-array>
 
-  
-  
-  
-  
+    <string name="btnCalificar">Calificación de Envío</string>
+    <string name="etID">ID de Envío</string>
+    <string name="tituloCalificacion">Calificación de Envío</string>
+    <string name="nosInteresa">¡Nos interesa su opinión!</string>
+    <string name="datosEnvio">Datos del Envío</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="calificacion">Calificación</string>
+
+
+
+
+
     <!---STRINGS DE ADMINISTRADOR-->
 
     <!---Bottom NavigationBar administrador-->
