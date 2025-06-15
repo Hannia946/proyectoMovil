@@ -15,7 +15,7 @@
         android:padding="15dp">
 
         <TextView
-            android:text="@string/txtLoginA"
+            android:text="@string/txtLoginR"
             android:layout_gravity="center"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/etEmailA"
+                android:id="@+id/etEmailR"
                 android:hint="@string/etEmailA"
                 android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/email"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
             <EditText
-                android:id="@+id/etPasswordA"
+                android:id="@+id/etPasswordR"
                 android:hint="@string/etPasswordA"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/password"
@@ -62,7 +62,7 @@
 
         <!--Boton ingresar-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLoginA"
+            android:id="@+id/btnLoginR"
             android:text="@string/btnLoginA"
             android:textAllCaps="true"
             android:layout_gravity="center"
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tvRegistrarA"
+            android:id="@+id/tvRegistrarR"
             android:textSize="17sp"
             android:textStyle="bold"
             android:textColor="@color/orange"
