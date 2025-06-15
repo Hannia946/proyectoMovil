@@ -38,6 +38,9 @@
             android:name=".cliente.MainActivityCliente"
             android:exported="false" />
         <activity
+            android:name=".cliente.RegistroClienteActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -57,11 +60,9 @@
             android:name=".Repartidor.MainActivityRepartidor"
             android:exported="false" />
 
-
-
-
-
-
+        <activity
+            android:name=".cliente.ClienteHomeActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
