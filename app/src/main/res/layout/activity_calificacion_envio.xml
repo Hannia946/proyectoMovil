@@ -114,6 +114,7 @@
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:progressTint="@color/orange"
             android:numStars="5"
             android:stepSize="1.0" />
 

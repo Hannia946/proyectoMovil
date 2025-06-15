@@ -1,7 +1,10 @@
 package com.example.proyecto.cliente
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
+import com.example.proyecto.Datos
 import com.example.proyecto.R
 import com.example.proyecto.databinding.ActivityCalificacionEnvioBinding
 
@@ -24,6 +27,9 @@ class CalificacionEnvioActivity : AppCompatActivity() {
         val noD = intent.getStringExtra("noD")
         val coloniaD = intent.getStringExtra("coloniaD")
         val estadoD = intent.getStringExtra("estadoD")
+        val comentario = intent.getStringExtra("comentarios")
+        val calificacion = intent.getStringExtra("calificacion")
+
 
         binding.etIdEnvio.setText(id)
 
@@ -32,6 +38,12 @@ class CalificacionEnvioActivity : AppCompatActivity() {
 
         val calleDestinatario = "${calleD ?: ""} no.${noD ?: ""}, ${coloniaD ?: ""}, ${estadoD ?: ""}"
         binding.etDireccionD.setText(calleDestinatario)
+
+        binding.ratingBar.rating = calificacion?.toFloat() ?: 0f
+        binding.ComentariosEnvio.setText(comentario ?: "")
+
+
+
 
         //activa flecha pa ir atrás
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -47,6 +59,28 @@ class CalificacionEnvioActivity : AppCompatActivity() {
     }
 
     private fun actualizarCalificacion(){
+        val comentarios = binding.ComentariosEnvio.text.toString()
+        val calificacion = binding.ratingBar.rating.toInt()
+
+        val idEnvio = binding.etIdEnvio.text.toString().toIntOrNull()
+
+        if (idEnvio != null) {
+            Datos.calificarEnvio(idEnvio, calificacion, comentarios)
+
+            AlertDialog.Builder(this)
+                .setTitle("Calificación guardada")
+                .setMessage("¡Gracias por su opinión!")
+                .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
+                .show()
+
+            finish()
+        } else {
+            AlertDialog.Builder(this)
+                .setTitle("ID inválido")
+                .setMessage("ID de envío inválido")
+                .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
+                .show()
+        }
 
     }
 }

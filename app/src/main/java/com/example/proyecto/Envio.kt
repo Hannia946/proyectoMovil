@@ -25,5 +25,7 @@ class Envio(
     var piezas: String,
     var Ancho: String,
     var Largo: String,
-    var Alto: String
+    var Alto: String,
+    var calificacion: Int? = null,
+    var comentarios: String? = null
 )
