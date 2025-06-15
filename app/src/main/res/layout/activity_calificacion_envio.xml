@@ -49,22 +49,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Nombre-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:hint="@string/etNombreCompleto"
-                android:id="@+id/etNombreR"
-                android:enabled="false"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
         <!--Dirección de remitente-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

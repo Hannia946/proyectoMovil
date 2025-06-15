@@ -14,6 +14,9 @@ class LoginClienteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_cliente)
 
+        //activa flecha pa ir atrás
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val etEmailC = findViewById<EditText>(R.id.etEmail)
         val etPasswordC = findViewById<EditText>(R.id.etPassword)
         val btnLoginC = findViewById<Button>(R.id.btnLoginC)
