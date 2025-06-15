@@ -12,35 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
-
-
-
-        <activity
-        android:name=".Repartidor.RepartidorHomeActivity"
-        android:exported="false" />
-
-
-
-        <activity
-
-            android:name=".administrador.MainActivityAdministrador"
-            android:exported="false" />
-        <activity
-            android:name=".Repartidor.RegistroRepartidor"
-            android:exported="false" />
-        <activity
-            android:name=".Repartidor.LoginRepartidor"
-            android:exported="false" />
-        <activity
-            android:name=".SeleccionarTipoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".cliente.MainActivityCliente"
-            android:exported="false" />
-        <activity
-            android:name=".cliente.RegistroClienteActivity"
-            android:exported="false" />
-        <activity
+      
+      <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -49,16 +22,72 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+      
+      <activity
+            android:name=".SeleccionarTipoActivity"
+            android:exported="false" />
+      
+      <activity
             android:name=".MainActivity"
             android:exported="true" />
+      
+      
+      
+      <!---Activitys de Administrador-->
+      
         <activity
-            android:name=".cliente.LoginClienteActivity"
+            android:name=".administrador.RegistroAdministrador"
             android:exported="false" />
-
-        <activity
+      
+      <activity
+            android:name=".administrador.LoginAdministrador"
+            android:exported="false" />
+      
+      <activity
+            android:name=".administrador.MainActivityAdministrador"
+            android:exported="false" />
+      
+      <activity
+            android:name=".Repartidor.RegistroAdministrador"
+            android:exported="false" />
+      
+      
+      
+      <!---Activitys de Repartidor-->
+      
+      <activity
             android:name=".Repartidor.MainActivityRepartidor"
             android:exported="false" />
+      
+      <activity
+            android:name=".Repartidor.RegistroRepartidor"
+            android:exported="false" />
+      
+      <activity
+            android:name=".Repartidor.LoginRepartidor"
+            android:exported="false" />
+        
+        <activity
+            android:name=".Repartidor.RepartidorHomeActivity"
+            android:exported="false" />
+        
+        
+        
+        
+      
+      <!---Activitys de Cliente-->
+      
+        <activity
+            android:name=".cliente.MainActivityCliente"
+            android:exported="false" />
+      
+        <activity
+            android:name=".cliente.RegistroClienteActivity"
+            android:exported="false" />
+               
+        <activity
+            android:name=".cliente.LoginClienteActivity"
+            android:exported="false" />        
 
         <activity
             android:name=".cliente.ClienteHomeActivity"
