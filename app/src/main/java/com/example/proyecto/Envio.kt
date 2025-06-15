@@ -1,6 +1,7 @@
 package com.example.proyecto
 
 class Envio(
+
     var id: Int,
     var nombreRemitente: String,
     var apellidoRemitente: String,

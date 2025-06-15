@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto.cliente.LoginClienteActivity
 import com.example.proyecto.databinding.ActivitySeleccionarTipoBinding
 import com.example.proyecto.Repartidor.LoginRepartidor
+import com.example.proyecto.administrador.LoginAdministrador
 
 
 class SeleccionarTipoActivity : AppCompatActivity() {
+
 
     private lateinit var binding: ActivitySeleccionarTipoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +26,8 @@ class SeleccionarTipoActivity : AppCompatActivity() {
             startActivity(Intent(this@SeleccionarTipoActivity, LoginRepartidor::class.java))
         }
 
-        /*binding.tipoAdmin.setOnClickListener{
-            startActivity(Intent(this@SeleccionarTipoActivity, LoginAdminActivity::class.java))
-        }*/
+        binding.tipoAdmin.setOnClickListener{
+            startActivity(Intent(this@SeleccionarTipoActivity, LoginAdministrador::class.java))
+        }
     }
 }

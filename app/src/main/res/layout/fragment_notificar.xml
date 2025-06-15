@@ -1,30 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".Repartidor.nav_fragments_repartidor.FragmentNotificar">
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp"
+    android:layout_margin="8dp">
 
-    <!-- Título -->
-    <TextView
-        android:id="@+id/tvTituloEntregados"
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Entregados"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:layout_marginBottom="12dp"/>
+        android:layout_height="wrap_content">
 
-    <!-- RecyclerView que mostrará la lista de entregas -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerEntregados"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="Lista de entregas"/>
+        <TextView
+            android:id="@+id/tvIdEnvio"
+            android:textStyle="bold"
+            android:text="ID: #"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvRemitente"
+            android:text="Remitente: Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDestinatario"
+            android:text="Destinatario: Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDireccionOrigen"
+            android:text="Origen: Dirección completa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDireccionDestino"
+            android:text="Destino: Dirección completa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -36,9 +36,6 @@
     <string name="img_repartidor_desc">Imagen del repartidor</string>
 
 
-
-
-
     <!---STRINGS DE CLIENTE-->
 
 
@@ -126,9 +123,6 @@
     <string name="datosEnvio">Datos del Envío</string>
     <string name="comentarios">Comentarios</string>
     <string name="calificacion">Calificar</string>
-
-
-
 
 
     <!---STRINGS DE ADMINISTRADOR-->
