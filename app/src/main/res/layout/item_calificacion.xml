@@ -44,5 +44,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:progressTint="@color/orange"
+            android:numStars="5"
+            android:stepSize="1.0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalificar"
+            android:textAllCaps="true"
+            card_view:cornerRadius="8dp"
+            android:layout_gravity="center"
+            android:text="@string/btnCalificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

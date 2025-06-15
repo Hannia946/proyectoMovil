@@ -49,22 +49,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Nombre-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:hint="@string/etNombreCompleto"
-                android:id="@+id/etNombreR"
-                android:enabled="false"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
         <!--Dirección de remitente-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -130,8 +114,17 @@
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:progressTint="@color/orange"
             android:numStars="5"
             android:stepSize="1.0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/calificacion"
+            android:layout_marginTop="15dp"/>
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
