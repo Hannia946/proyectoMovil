@@ -25,7 +25,7 @@ class CalificacionEnvioActivity : AppCompatActivity() {
         val coloniaD = intent.getStringExtra("coloniaD")
         val estadoD = intent.getStringExtra("estadoD")
 
-        binding.etIdEnvio.setText(id ?: "")
+        binding.etIdEnvio.setText(id)
 
         val calleRemitente = "${calle ?: ""} no.${no ?: ""}, ${colonia ?: ""}, ${estado ?: ""}"
         binding.etDireccionR.setText(calleRemitente)
@@ -36,8 +36,17 @@ class CalificacionEnvioActivity : AppCompatActivity() {
         //activa flecha pa ir atrás
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        binding.btnCalificar.setOnClickListener{actualizarCalificacion()}
 
 
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed() // Para API modernas
+        return true
+    }
+
+    private fun actualizarCalificacion(){
 
     }
 }

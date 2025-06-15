@@ -32,7 +32,7 @@ class EnvioAdapter(private val contexto: Context, private val listaEnvios: Mutab
 
     private fun calificacion(envio :Envio) {
         val intent = Intent(contexto, CalificacionEnvioActivity::class.java).apply {
-            putExtra("id", envio.id)
+            putExtra("id", envio.id.toString())
             putExtra("calle", envio.calleRemitente)
             putExtra("no", envio.noRemitente)
             putExtra("colonia", envio.coloniaRemitente)

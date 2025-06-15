@@ -61,5 +61,11 @@ class RegistroClienteActivity : AppCompatActivity() {
 
 
 
+
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed() // Para API modernas
+        return true
     }
 }
