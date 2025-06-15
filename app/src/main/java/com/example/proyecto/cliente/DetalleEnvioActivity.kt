@@ -60,7 +60,7 @@ class DetalleEnvioActivity : AppCompatActivity(){
 
         binding.etQtyPzas.setText(piezas)
         binding.etPeso.setText(peso)
-        binding.etDescipcion.setText(descripcion)
+        binding.etDescripcion.setText(descripcion)
 
 
 
