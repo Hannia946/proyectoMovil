@@ -124,6 +124,16 @@
     <string name="comentarios">Comentarios</string>
     <string name="calificacion">Calificar</string>
 
+    <!---Detalle Envio Activity-->
+    <string name="nombrerCompletoRemitente">Nombre Remitente</string>
+    <string name="nombrerCompletoDestinatario">Nombre Destinatario</string>
+    <string name="direccionCompletaRemitente">Dirección Remitente</string>
+    <string name="direccionCompletaDestinatario">Dirección Destinatario</string>
+    <string name="descripcionCompletaPaquete">Descripción de Paquete</string>
+    <string name="dimencionCompletaPaquete">Dimensiones de paquete</string>
+    <string name="pesoCompletoPaquete">Peso de paquete</string>
+    <string name="piezasCompletasPaquete">Piezas del Paquete</string>
+
 
     <!---STRINGS DE ADMINISTRADOR-->
 

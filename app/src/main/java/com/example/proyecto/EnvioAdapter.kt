@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto.cliente.CalificacionEnvioActivity
+import com.example.proyecto.cliente.bottom_nav_fragments_cliente.FragmentCalificarCliente
 import com.example.proyecto.databinding.ItemEnvioBinding
 
 class EnvioAdapter(private val contexto: Context, private val listaEnvios: MutableList<Envio>) : RecyclerView.Adapter<EnvioAdapter.EnvioViewHolder>() {
@@ -32,4 +33,11 @@ class EnvioAdapter(private val contexto: Context, private val listaEnvios: Mutab
     }
 
     override fun getItemCount(): Int = listaEnvios.size
+
+    private fun verCalificacion(){
+        val intent = Intent(contexto, FragmentCalificarCliente::class.java).apply{
+
+        }
+        contexto.startActivity(intent)
+    }
 }
