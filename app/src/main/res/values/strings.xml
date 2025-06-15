@@ -3,6 +3,7 @@
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
 
+    <!---STRINGS DE REPARTIDOR-->
 
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
@@ -31,13 +32,14 @@
     <string name="etRPassword">Confirmar password</string>
     <string name="btnRegistrarR">Registrarme</string>
 
-
     <!---Fragments de inicio del Repartidor-->
     <string name="img_repartidor_desc">Imagen del repartidor</string>
 
-
-    <!---División de REPARTIDOR Y CLIENTE-->
-
+  
+  
+  
+  
+    <!---STRINGS DE CLIENTE-->
 
     <!---NavigationDrawer Cliente-->
     <string name="op_inicio_cliente">Inicio</string>
@@ -48,7 +50,6 @@
     <string name="op_registro_cliente">Registrar Envío</string>
     <string name="op_historial_cliente">Historial de Envíos</string>
     <string name="op_calificar_cliente">Calificar Envío</string>
-
 
     <!---Nav header Cliente-->
     <string name="bienvenida">Bienvenido</string>
@@ -76,9 +77,52 @@
     <string name="tipoRepartidor">Soy Repartidor</string>
     <string name="tipoAdmin">Soy Administrador</string>
 
+    <!---Fragment para registro de un envío-->
+    <string name="titulo_registroEnvio">Registrar envío nuevo</string>
+    <string name="datosCliente">Datos del remitente</string>
 
-    <!---División de REPARTIDOR - CLIENTE - ADMINISTRADOR-->
+    <string name="etNombreCompleto">Nombre Completo</string>
+    <!--<string name="etTelefonoC">Teléfono</string>-->
+    <!--<string name="etEmail">Email</string>-->
 
+    <string name="datosDestinatario">Datos del Destinatario</string>
+    <string name="datosRecoleccion">Datos de Recolección</string>
+    <string name="etCalle">Calle</string>
+    <string name="etNoCasa">No.</string>
+    <string name="etColonia">Colonia</string>
+    <string name="etEstado">Estado</string>
+    <string name="etCodigoPostal">Código Postal</string>
+
+
+    <string name="datosPaquete">Datos del Paquete</string>
+    <string name="etDescripcionContenido">Descripción del contenido</string>
+    <string name="etQtyPiezas">Cantidad de piezas</string>
+    <string name="etAncho">Ancho</string>
+    <string name="etLargo">Largo</string>
+    <string name="etAlto">Altura</string>
+    <string name="etPeso">Peso</string>
+    <string name="btnRegistrarEnvio">Registrar Envío</string>
+
+    <!---Array de spinners-->
+    <string-array name="opciones_peso">
+        <item>0.5 kg</item>
+        <item>1 kg</item>
+        <item>2 kg</item>
+        <item>5 kg</item>
+    </string-array>
+
+    <string-array name="opciones_piezas">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+  
+  
+  
+  
+    <!---STRINGS DE ADMINISTRADOR-->
 
     <!---Bottom NavigationBar administrador-->
     <string name="op_misrepartidores_administrador">lista de repartidores</string>

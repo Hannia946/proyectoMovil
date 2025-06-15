@@ -1,60 +1,151 @@
 package com.example.proyecto.cliente.bottom_nav_fragments_cliente
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import com.example.proyecto.Datos
 import com.example.proyecto.R
+import com.example.proyecto.databinding.FragmentRegistroEnvioClienteBinding
+import android.os.Handler
+import android.os.Looper
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentRegistroEnvioCliente.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FragmentRegistroEnvioCliente : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentRegistroEnvioClienteBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro_envio_cliente, container, false)
+    ): View {
+        _binding = FragmentRegistroEnvioClienteBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentRegistroEnvioCliente.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FragmentRegistroEnvioCliente().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val adapterPeso = ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.opciones_peso,
+            android.R.layout.simple_spinner_item
+        )
+        adapterPeso.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.SpinnerPeso.adapter = adapterPeso
+
+        val adapterPiezas = ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.opciones_piezas,
+            android.R.layout.simple_spinner_item
+        )
+        adapterPiezas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.SpinnerQtyPzas.adapter = adapterPiezas
+
+        binding.btnRegistrarEnvio.setOnClickListener {
+            val rNombre = binding.etNombreCompletoR.text.toString()
+            val rApellido = binding.etApellidosR.text.toString()
+            val rTel = binding.etTelefonoR.text.toString()
+            val rEmail = binding.etEmailR.text.toString()
+            val rCalle = binding.etCalleR.text.toString()
+            val rNo = binding.etNoCasaR.text.toString()
+            val rColonia = binding.etColoniaR.text.toString()
+            val rEstado = binding.etEstadoR.text.toString()
+            val rCP = binding.etCodigoPostalR.text.toString()
+
+            val dNombre = binding.etNombreCompletoD.text.toString()
+            val dApellido = binding.etApellidoD.text.toString()
+            val dTel = binding.etTelefonoD.text.toString()
+            val dEmail = binding.etEmailD.text.toString()
+            val dCalle = binding.etCalleD.text.toString()
+            val dNo = binding.etNoCasaD.text.toString()
+            val dColonia = binding.etColoniaD.text.toString()
+            val dEstado = binding.etEstadoD.text.toString()
+            val dCP = binding.etCodigoPostalD.text.toString()
+
+            val descripcion = binding.etDescripcion.text.toString()
+            val peso = binding.SpinnerPeso.selectedItem.toString()
+            val piezas = binding.SpinnerQtyPzas.selectedItem.toString()
+            val ancho = binding.etAncho.text.toString()
+            val largo = binding.etLargo.text.toString()
+            val alto = binding.etAlto.text.toString()
+
+            if (rNombre.isBlank() || dNombre.isBlank() || descripcion.isBlank()) {
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Campos Incompletos")
+                    .setMessage("Llena todos los campos obligatorios")
+                    .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
+                    .show()
+                return@setOnClickListener
             }
+
+            // Mostrar ProgressBar
+            binding.progressBar.visibility = View.VISIBLE
+            binding.btnRegistrarEnvio.isEnabled = false
+
+            // Simular tiempo de procesamiento
+            Handler(Looper.getMainLooper()).postDelayed({
+                Datos.agregarSolicitud(
+                    rNombre, rApellido, rTel, rEmail, rCalle, rNo, rColonia, rEstado, rCP,
+                    dNombre, dApellido, dTel, dEmail, dCalle, dNo, dColonia, dEstado, dCP,
+                    descripcion, peso, piezas, ancho, largo, alto
+                )
+
+                // Ocultar ProgressBar
+                binding.progressBar.visibility = View.GONE
+                binding.btnRegistrarEnvio.isEnabled = true
+
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Solicitud de envío")
+                    .setMessage("Solicitud enviada correctamente")
+                    .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
+                    .show()
+
+                // Limpiar campos
+                limpiarCampos()
+
+            }, 1500) // 1.5 segundos
+
+        }
+    }
+
+    private fun limpiarCampos() {
+        with(binding) {
+            etNombreCompletoR.setText("")
+            etApellidosR.setText("")
+            etTelefonoR.setText("")
+            etEmailR.setText("")
+            etCalleR.setText("")
+            etNoCasaR.setText("")
+            etColoniaR.setText("")
+            etEstadoR.setText("")
+            etCodigoPostalR.setText("")
+
+            etNombreCompletoD.setText("")
+            etApellidoD.setText("")
+            etTelefonoD.setText("")
+            etEmailD.setText("")
+            etCalleD.setText("")
+            etNoCasaD.setText("")
+            etColoniaD.setText("")
+            etEstadoD.setText("")
+            etCodigoPostalD.setText("")
+
+            etDescripcion.setText("")
+            etAncho.setText("")
+            etLargo.setText("")
+            etAlto.setText("")
+
+            SpinnerPeso.setSelection(0)
+            SpinnerQtyPzas.setSelection(0)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
