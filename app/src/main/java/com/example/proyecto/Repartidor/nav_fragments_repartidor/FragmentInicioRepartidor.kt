@@ -45,14 +45,7 @@ class FragmentInicioRepartidor : Fragment() {
         replaceFragment(FragmentNotificar())
         binding.bottomNavigation.selectedItemId = R.id.op_op_misnotificaciones_repartidor
 
-        binding.addFab.setOnClickListener{
-            Toast.makeText(
-                mContext,
-                "Has presionado en boton flotante",
-                Toast.LENGTH_SHORT
-            ).show()
 
-        }
 
         return binding.root
     }

@@ -6,25 +6,12 @@
 
 <group>
 
+
     <item
         android:id="@+id/op_inicio_repartidor"
         android:title="@string/op_inicio_repartidor"
         android:icon="@drawable/home"
         />
-
-
-    <item
-        android:id="@+id/op_pendientes_repartidor"
-        android:title="@string/op_pendientes_repartidor"
-        android:icon="@drawable/pendientes"
-        />
-
-    <item
-        android:id="@+id/op_notificar_repartidor"
-        android:title="@string/op_notificar_repartidor"
-        android:icon="@drawable/notificacion"
-        />
-
 
 </group>
 
