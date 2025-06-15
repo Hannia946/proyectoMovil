@@ -62,6 +62,8 @@ class DetalleEnvioActivity : AppCompatActivity(){
         binding.etPeso.setText(peso)
         binding.etDescripcion.setText(descripcion)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
 
     }
