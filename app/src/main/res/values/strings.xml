@@ -125,8 +125,9 @@
     <string name="calificacion">Calificar</string>
 
     <!---Detalle Envio Activity-->
-    <string name="nombrerCompletoRemitente">Nombre Remitente</string>
-    <string name="nombrerCompletoDestinatario">Nombre Destinatario</string>
+    <string name="detalleEnvio">Detalle de su envío</string>
+    <string name="nombreCompletoRemitente">Nombre Remitente</string>
+    <string name="nombreCompletoDestinatario">Nombre Destinatario</string>
     <string name="direccionCompletaRemitente">Dirección Remitente</string>
     <string name="direccionCompletaDestinatario">Dirección Destinatario</string>
     <string name="descripcionCompletaPaquete">Descripción de Paquete</string>

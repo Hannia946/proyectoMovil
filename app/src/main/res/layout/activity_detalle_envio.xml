@@ -17,7 +17,7 @@
         android:paddingBottom="80dp">
 
         <TextView
-            android:text="@string/tituloCalificacion"
+            android:text="@string/detalleEnvio"
             android:layout_gravity="center"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -49,6 +49,21 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!--Nombre de remitente-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etNombreR"
+                android:hint="@string/nombreCompletoRemitente"
+                android:enabled="false"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:inputType="textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!--Dirección de remitente-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -64,6 +79,20 @@
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!--Nombre de destinatario-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etNombreD"
+                android:hint="@string/nombreCompletoDestinatario"
+                android:enabled="false"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:inputType="textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!--Dirección de destinatario-->
         <com.google.android.material.textfield.TextInputLayout
@@ -73,7 +102,7 @@
                 android:id="@+id/etDireccionD"
                 android:enabled="false"
                 android:layout_gravity="center"
-                android:hint="@string/etCalle"
+                android:hint="@string/direccionCompletaDestinatario"
                 android:layout_marginTop="15dp"
                 android:inputType="textCapWords"
                 android:layout_width="match_parent"
@@ -81,19 +110,116 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:text="@string/nosInteresa"
+            android:id="@+id/lbDetalles"
+            android:text="@string/datosPaquete"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <!--Ancho, largo y alto de paquete-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:weightSum="3">
+
+            <!--Ancho-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp">
+                <EditText
+                    android:id="@+id/etAncho"
+                    android:hint="@string/etAncho"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Largo-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp">
+                <EditText
+                    android:id="@+id/etLargo"
+                    android:hint="@string/etLargo"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Alto-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp">
+                <EditText
+                    android:id="@+id/etAlto"
+                    android:hint="@string/etAlto"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!--Linear Layout para PESO Y PIEZAS-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:weightSum="2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp">
+                <EditText
+                    android:id="@+id/etPeso"
+                    android:hint="@string/pesoCompletoPaquete"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp">
+                <EditText
+                    android:id="@+id/etQtyPzas"
+                    android:hint="@string/piezasCompletasPaquete"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Descipcion del paquete-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/ComentariosEnvio"
-                android:hint="@string/comentarios"
+                android:id="@+id/etDescripcion"
+                android:hint="@string/descripcionCompletaPaquete"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:ems="10"
@@ -102,22 +228,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:text="@string/calificacion"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:progressTint="@color/orange"
-            android:numStars="5"
-            android:stepSize="1.0" />
-
+        <!--Boton para ver calificacion-->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCalificar"
             android:layout_width="wrap_content"

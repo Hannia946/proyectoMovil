@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
         <activity
-            android:name=".cliente.DetalleEnvioActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -65,6 +62,9 @@
             android:exported="false" />
         <activity
             android:name=".cliente.CalificacionEnvioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.DetalleEnvioActivity"
             android:exported="false" />
     </application>
 
