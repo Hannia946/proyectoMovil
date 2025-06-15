@@ -1,12 +1,14 @@
 package com.example.proyecto
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto.cliente.CalificacionEnvioActivity
 import com.example.proyecto.databinding.ItemEnvioBinding
-import com.example.proyecto.Envio
 
-class EnvioAdapter(private val listaEnvios: MutableList<Envio>) : RecyclerView.Adapter<EnvioAdapter.EnvioViewHolder>() {
+class EnvioAdapter(private val contexto: Context, private val listaEnvios: MutableList<Envio>) : RecyclerView.Adapter<EnvioAdapter.EnvioViewHolder>() {
 
     inner class EnvioViewHolder(val binding: ItemEnvioBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -23,8 +25,28 @@ class EnvioAdapter(private val listaEnvios: MutableList<Envio>) : RecyclerView.A
             tvDestinatario.text = "Destinatario: ${envio.nombreDestinatario} ${envio.apellidoDestinatario}"
             tvDireccionOrigen.text = "Origen: ${envio.calleRemitente} ${envio.noRemitente}, ${envio.coloniaRemitente}, ${envio.estadoRemitente}"
             tvDireccionDestino.text = "Destino: ${envio.calleDestinatario} ${envio.noDestinatario}, ${envio.coloniaDestinatario}, ${envio.estadoDestinatario}"
+            btnCalificar.setOnClickListener{calificacion(envio)}
         }
+
     }
+
+    private fun calificacion(envio :Envio) {
+        val intent = Intent(contexto, CalificacionEnvioActivity::class.java).apply {
+            putExtra("id", envio.id)
+            putExtra("calle", envio.calleRemitente)
+            putExtra("no", envio.noRemitente)
+            putExtra("colonia", envio.coloniaRemitente)
+            putExtra("estado", envio.estadoRemitente)
+
+            putExtra("calleD", envio.calleDestinatario)
+            putExtra("noD", envio.noDestinatario)
+            putExtra("coloniaD", envio.coloniaDestinatario)
+            putExtra("estadoD", envio.estadoDestinatario)
+
+        }
+        contexto.startActivity(intent)
+    }
+
 
     override fun getItemCount(): Int = listaEnvios.size
 }
