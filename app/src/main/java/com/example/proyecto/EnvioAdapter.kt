@@ -25,28 +25,10 @@ class EnvioAdapter(private val contexto: Context, private val listaEnvios: Mutab
             tvDestinatario.text = "Destinatario: ${envio.nombreDestinatario} ${envio.apellidoDestinatario}"
             tvDireccionOrigen.text = "Origen: ${envio.calleRemitente} ${envio.noRemitente}, ${envio.coloniaRemitente}, ${envio.estadoRemitente}"
             tvDireccionDestino.text = "Destino: ${envio.calleDestinatario} ${envio.noDestinatario}, ${envio.coloniaDestinatario}, ${envio.estadoDestinatario}"
-            btnCalificar.setOnClickListener{calificacion(envio)}
+
         }
 
     }
-
-    private fun calificacion(envio :Envio) {
-        val intent = Intent(contexto, CalificacionEnvioActivity::class.java).apply {
-            putExtra("id", envio.id)
-            putExtra("calle", envio.calleRemitente)
-            putExtra("no", envio.noRemitente)
-            putExtra("colonia", envio.coloniaRemitente)
-            putExtra("estado", envio.estadoRemitente)
-
-            putExtra("calleD", envio.calleDestinatario)
-            putExtra("noD", envio.noDestinatario)
-            putExtra("coloniaD", envio.coloniaDestinatario)
-            putExtra("estadoD", envio.estadoDestinatario)
-
-        }
-        contexto.startActivity(intent)
-    }
-
 
     override fun getItemCount(): Int = listaEnvios.size
 }

@@ -47,6 +47,7 @@ class FragmentRegistroEnvioCliente : Fragment() {
 
         binding.btnRegistrarEnvio.setOnClickListener {
             registrarEnvio()
+            limpiarCampos()
         }
     }
 

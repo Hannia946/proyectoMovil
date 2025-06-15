@@ -12,6 +12,9 @@ class RegistroClienteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_cliente)
 
+        //activa flecha pa ir atrás
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val nombre = findViewById<EditText>(R.id.etNombresC)
         val apellido = findViewById<EditText>(R.id.etApellidosC)
         val telefono = findViewById<EditText>(R.id.etTelefonoC)
@@ -58,5 +61,11 @@ class RegistroClienteActivity : AppCompatActivity() {
 
 
 
+
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed() // Para API modernas
+        return true
     }
 }

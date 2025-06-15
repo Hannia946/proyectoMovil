@@ -58,4 +58,12 @@ object Datos {
             )
         )
     }
+
+    fun calificarEnvio(id: Int, calificacion: Int, comentarios: String) {
+        val envio = solicitudes.find { it.id == id }
+        envio?.let {
+            it.calificacion = calificacion
+            it.comentarios = comentarios
+        }
+    }
 }
