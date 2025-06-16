@@ -40,7 +40,7 @@
             app:cornerRadius="8dp"
             android:textAllCaps="true"
             android:layout_marginTop="10dp"/>
-
+        <!--
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -53,7 +53,7 @@
             android:id="@+id/tipoAdmin"
             app:cornerRadius="8dp"
             android:textAllCaps="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"/>-->
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

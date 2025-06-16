@@ -34,7 +34,7 @@ class FragmentInicioRepartidor : Fragment() {
                 R.id.op_mispendientes_repartidor->{
                     replaceFragment(FragmentPendientes())
                 }
-                R.id.op_op_misnotificaciones_repartidor->{
+                R.id.op_miscalificaciones_repartidor->{
                     replaceFragment(FragmentNotificar())
 
                 }
@@ -43,7 +43,7 @@ class FragmentInicioRepartidor : Fragment() {
 
         }
         replaceFragment(FragmentPendientes())
-        binding.bottomNavigation.selectedItemId = R.id.op_op_misnotificaciones_repartidor
+        binding.bottomNavigation.selectedItemId = R.id.op_mispendientes_repartidor
 
 
         return binding.root

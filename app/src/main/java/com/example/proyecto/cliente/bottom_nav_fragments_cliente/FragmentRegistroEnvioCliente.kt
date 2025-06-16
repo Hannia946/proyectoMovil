@@ -1,6 +1,8 @@
 package com.example.proyecto.cliente.bottom_nav_fragments_cliente
 
 import android.app.AlertDialog
+import android.content.Context
+import android.graphics.Rect
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +14,9 @@ import com.example.proyecto.R
 import com.example.proyecto.databinding.FragmentRegistroEnvioClienteBinding
 import android.os.Handler
 import android.os.Looper
+import android.view.MotionEvent
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 
 class FragmentRegistroEnvioCliente : Fragment() {
 
@@ -49,6 +54,26 @@ class FragmentRegistroEnvioCliente : Fragment() {
             registrarEnvio()
             limpiarCampos()
         }
+
+        binding.root.setOnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                val focusedView = requireActivity().currentFocus
+                if (focusedView is EditText) {
+                    val outRect = Rect()
+                    focusedView.getGlobalVisibleRect(outRect)
+                    if (!outRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
+                        focusedView.clearFocus()
+                        ocultarTeclado(focusedView)
+                    }
+                }
+            }
+            false
+        }
+    }
+
+    private fun ocultarTeclado(view: View) {
+        val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun registrarEnvio(){
@@ -153,4 +178,6 @@ class FragmentRegistroEnvioCliente : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
