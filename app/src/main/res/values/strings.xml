@@ -79,6 +79,7 @@
     <!---Fragment para registro de un envío-->
     <string name="titulo_registroEnvio">Registrar envío nuevo</string>
     <string name="datosCliente">Datos del remitente</string>
+    <string name="btnVerEntrega">Ver Envío</string>
 
     <string name="etNombreCompleto">Nombre Completo</string>
     <!--<string name="etTelefonoC">Teléfono</string>-->
@@ -104,6 +105,7 @@
 
     <!---Array de spinners-->
     <string-array name="opciones_peso">
+        <item>Seleccionar</item>
         <item>0.5 kg</item>
         <item>1 kg</item>
         <item>2 kg</item>
@@ -111,6 +113,7 @@
     </string-array>
 
     <string-array name="opciones_piezas">
+        <item>Seleccionar</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>

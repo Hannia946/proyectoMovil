@@ -29,7 +29,8 @@ class EnvioAdapter(private val contexto: Context, private val listaEnvios: Mutab
             tvDireccionOrigen.text = "Origen: ${envio.calleRemitente} ${envio.noRemitente}, ${envio.coloniaRemitente}, ${envio.estadoRemitente}"
             tvDireccionDestino.text = "Destino: ${envio.calleDestinatario} ${envio.noDestinatario}, ${envio.coloniaDestinatario}, ${envio.estadoDestinatario}"
 
-            root.setOnClickListener{verDetalleEnvio(envio)}
+            btnVerEntrega.setOnClickListener{verDetalleEnvio(envio)}
+            //root.setOnClickListener{verDetalleEnvio(envio)}
         }
 
     }
