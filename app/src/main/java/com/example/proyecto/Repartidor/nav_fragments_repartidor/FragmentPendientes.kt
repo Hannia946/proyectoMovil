@@ -26,11 +26,10 @@ class FragmentPendientes : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 🚨 ¡ESTO FALTABA!
-        binding.recyclerHistorial.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = TareaAdapter(requireContext(), Datos.solicitudes)
-        }
+        val adapter = TareaAdapter(requireContext(), Datos.solicitudes)
+        binding.recyclerHistorial.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerHistorial.adapter = adapter
+
     }
 
     override fun onDestroyView() {
