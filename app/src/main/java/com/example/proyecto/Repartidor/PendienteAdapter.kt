@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto.Envio
-import com.example.proyecto.EnvioAdapter.EnvioViewHolder
-import com.example.proyecto.databinding.ItemEnvioBinding
 import com.example.proyecto.databinding.ItemPendienteBinding
 
 
