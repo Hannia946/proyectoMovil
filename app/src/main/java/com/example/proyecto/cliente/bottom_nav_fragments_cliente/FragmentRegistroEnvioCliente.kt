@@ -47,11 +47,10 @@ class FragmentRegistroEnvioCliente : Fragment() {
 
         binding.btnRegistrarEnvio.setOnClickListener {
             registrarEnvio()
-            limpiarCampos()
         }
     }
 
-    private fun registrarEnvio(){
+    private fun registrarEnvio() {
         val rNombre = binding.etNombreCompletoR.text.toString()
         val rApellido = binding.etApellidosR.text.toString()
         val rTel = binding.etTelefonoR.text.toString()
@@ -85,22 +84,23 @@ class FragmentRegistroEnvioCliente : Fragment() {
                 .setMessage("Llena todos los campos obligatorios")
                 .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
                 .show()
-            //return@setOnClickListener
+            return  // IMPORTANTE: detener la ejecución si no hay datos completos
         }
 
-        // Mostrar ProgressBar
+        // Mostrar ProgressBar y deshabilitar botón
         binding.progressBar.visibility = View.VISIBLE
         binding.btnRegistrarEnvio.isEnabled = false
 
-        // Simular tiempo de procesamiento
         Handler(Looper.getMainLooper()).postDelayed({
             Datos.agregarSolicitud(
                 rNombre, rApellido, rTel, rEmail, rCalle, rNo, rColonia, rEstado, rCP,
                 dNombre, dApellido, dTel, dEmail, dCalle, dNo, dColonia, dEstado, dCP,
-                descripcion, peso, piezas, ancho, largo, alto
+                descripcion, peso, piezas, ancho, largo, alto,
+                requireContext()
             )
 
-            // Ocultar ProgressBar
+
+            // Ocultar ProgressBar y habilitar botón
             binding.progressBar.visibility = View.GONE
             binding.btnRegistrarEnvio.isEnabled = true
 
@@ -110,11 +110,9 @@ class FragmentRegistroEnvioCliente : Fragment() {
                 .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
                 .show()
 
-            // Limpiar campos
             limpiarCampos()
 
-        }, 1500) // 1.5 segundos
-
+        }, 1500)
     }
 
     private fun limpiarCampos() {

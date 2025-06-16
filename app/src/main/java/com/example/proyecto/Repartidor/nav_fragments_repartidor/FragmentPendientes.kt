@@ -15,6 +15,8 @@ class FragmentPendientes : Fragment() {
     private var _binding: FragmentPendientesBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var tareaAdapter: TareaAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,11 +28,16 @@ class FragmentPendientes : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 🚨 ¡ESTO FALTABA!
-        binding.recyclerHistorial.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = TareaAdapter(requireContext(), Datos.solicitudes)
-        }
+        // Configurar layout manager una sola vez
+        binding.recyclerPendientes.layoutManager = LinearLayoutManager(requireContext())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Datos.cargarSolicitudes(requireContext())  // Carga los datos guardados
+        val adapter = TareaAdapter(requireContext(), Datos.solicitudes)
+        binding.recyclerPendientes.adapter = adapter
+        adapter.notifyDataSetChanged()
     }
 
     override fun onDestroyView() {
