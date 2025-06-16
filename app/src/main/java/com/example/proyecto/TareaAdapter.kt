@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proyecto.cliente.CalificacionEnvioActivity
+import com.example.proyecto.Repartidor.nav_fragments_repartidor.FragmentNotificar
 import com.example.proyecto.databinding.ItemTareaBinding
 
 class TareaAdapter(
@@ -26,27 +26,29 @@ class TareaAdapter(
 
         with(holder.binding) {
             // Mostrar información del envío
-            tvIdEnvioT.text = "ID: ${envio.id}"
+            tvIdEnvio.text = "ID: ${envio.id}"
             tvRemitente.text = "Remitente: ${envio.nombreRemitente} ${envio.apellidoRemitente}"
             tvDestinatario.text = "Destinatario: ${envio.nombreDestinatario} ${envio.apellidoDestinatario}"
             tvDireccionOrigen.text = "Origen: ${envio.calleRemitente} ${envio.noRemitente}, ${envio.coloniaRemitente}, ${envio.estadoRemitente}"
             tvDireccionDestino.text = "Destino: ${envio.calleDestinatario} ${envio.noDestinatario}, ${envio.coloniaDestinatario}, ${envio.estadoDestinatario}"
 
-            // Resetear estado por si se recicla la vista
+            // Restaurar estado inicial por si se recicla la vista
             btnEntregado.isEnabled = true
             btnNoEntregado.isEnabled = true
 
+            // Botón ENTREGADO
             btnEntregado.setOnClickListener {
-                Toast.makeText(contexto, "Click en palomita", Toast.LENGTH_SHORT).show()
+                Toast.makeText(contexto, "Servicio entregado correctamente", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(contexto, CalificacionEnvioActivity::class.java)
-                intent.putExtra("idEnvio", envio.id)
+                val intent = Intent(contexto, FragmentNotificar::class.java)
+                intent.putExtra("envio", envio) // Se envía el objeto completo
                 contexto.startActivity(intent)
 
                 btnEntregado.isEnabled = false
                 btnNoEntregado.isEnabled = true
             }
 
+            // Botón NO ENTREGADO
             btnNoEntregado.setOnClickListener {
                 Toast.makeText(contexto, "El envío no fue entregado", Toast.LENGTH_SHORT).show()
 

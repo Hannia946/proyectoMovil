@@ -1,5 +1,7 @@
 package com.example.proyecto
 
+import java.io.Serializable
+
 class Envio(
 
     var id: Int,
@@ -29,4 +31,4 @@ class Envio(
     var Alto: String,
     var calificacion: Int? = null,
     var comentarios: String? = null
-)
+): Serializable
