@@ -26,8 +26,8 @@ class SeleccionarTipoActivity : AppCompatActivity() {
             startActivity(Intent(this@SeleccionarTipoActivity, LoginRepartidor::class.java))
         }
 
-        binding.tipoAdmin.setOnClickListener{
+        /*binding.tipoAdmin.setOnClickListener{
             startActivity(Intent(this@SeleccionarTipoActivity, LoginAdministrador::class.java))
-        }
+        }*/
     }
 }
