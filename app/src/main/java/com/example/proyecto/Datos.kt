@@ -66,4 +66,11 @@ object Datos {
             it.comentarios = comentarios
         }
     }
+
+    fun entregarEnvio(id: Int, entregado: Boolean) {
+        val envio = solicitudes.find { it.id == id }
+        envio?.let {
+            it.entregado = true
+        }
+    }
 }

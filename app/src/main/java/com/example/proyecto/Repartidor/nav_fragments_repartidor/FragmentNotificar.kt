@@ -7,11 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyecto.Datos
-import com.example.proyecto.EnvioAdapter
-import com.example.proyecto.R
 import com.example.proyecto.TareaAdapter
-import com.example.proyecto.databinding.FragmentHistorialEnviosClienteBinding
 import com.example.proyecto.databinding.FragmentNotificarBinding
+
 
 class FragmentNotificar : Fragment() {
 

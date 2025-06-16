@@ -113,7 +113,7 @@ class FragmentRegistroEnvioCliente : Fragment() {
             // Limpiar campos
             limpiarCampos()
 
-        }, 1500) // 1.5 segundos
+        }, 3000) // 3 segundos
 
     }
 

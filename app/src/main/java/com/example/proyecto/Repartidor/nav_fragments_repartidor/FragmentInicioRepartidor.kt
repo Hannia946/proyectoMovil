@@ -42,9 +42,8 @@ class FragmentInicioRepartidor : Fragment() {
             true
 
         }
-        replaceFragment(FragmentNotificar())
+        replaceFragment(FragmentPendientes())
         binding.bottomNavigation.selectedItemId = R.id.op_op_misnotificaciones_repartidor
-
 
 
         return binding.root

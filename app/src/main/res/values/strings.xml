@@ -34,6 +34,7 @@
 
     <!---Fragments de inicio del Repartidor-->
     <string name="img_repartidor_desc">Imagen del repartidor</string>
+    <string name="btnCompletado">Entrega Completada</string>
 
 
     <!---STRINGS DE CLIENTE-->
@@ -125,7 +126,7 @@
     <string name="calificacion">Calificar</string>
 
     <!---Detalle Envio Activity-->
-    <string name="detalleEnvio">Detalle de su envío</string>
+    <string name="detalleEnvio">Detalle del envío</string>
     <string name="nombreCompletoRemitente">Nombre Remitente</string>
     <string name="nombreCompletoDestinatario">Nombre Destinatario</string>
     <string name="direccionCompletaRemitente">Dirección Remitente</string>
@@ -167,6 +168,7 @@
     <string name="etTelefonoA">Teléfono</string>
     <string name="etAPassword">Confirmar password</string>
     <string name="btnRegistrarA">Registrarme</string>
+
 
 
 </resources>
