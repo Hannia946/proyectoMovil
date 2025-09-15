@@ -11,9 +11,9 @@
 
     <!-- Notificaciones -->
     <item
-        android:id="@+id/op_op_misnotificaciones_repartidor"
-        android:title="@string/op_misnotificaciones_repartidor"
-        android:icon="@drawable/notificacion"
+        android:id="@+id/op_miscalificaciones_repartidor"
+        android:title="@string/op_miscalificaciones_repartidor"
+        android:icon="@drawable/rate"
         />
 
 </menu>

@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyecto.Datos
-import com.example.proyecto.TareaAdapter
 import com.example.proyecto.databinding.FragmentPendientesBinding
+import com.example.proyecto.PendienteAdapter
 
 class FragmentPendientes : Fragment() {
 
@@ -26,11 +26,10 @@ class FragmentPendientes : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 🚨 ¡ESTO FALTABA!
-        binding.recyclerHistorial.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = TareaAdapter(requireContext(), Datos.solicitudes)
-        }
+        val adapter = PendienteAdapter(requireContext(), Datos.solicitudes)
+        binding.recyclerHistorial.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerHistorial.adapter = adapter
+
     }
 
     override fun onDestroyView() {

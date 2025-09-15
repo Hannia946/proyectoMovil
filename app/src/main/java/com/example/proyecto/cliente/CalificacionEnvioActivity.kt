@@ -3,7 +3,6 @@ package com.example.proyecto.cliente
 import android.app.AlertDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.proyecto.Datos
 import com.example.proyecto.R
 import com.example.proyecto.databinding.ActivityCalificacionEnvioBinding

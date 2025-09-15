@@ -7,7 +7,8 @@
 
     <!---Bottom NavigationBar Repartidor-->
     <string name="op_mispendientes_repartidor">Pendientes</string>
-    <string name="op_misnotificaciones_repartidor">Notificar</string>
+    <string name="op_misnotificacionees_repartidor">Notificar</string>
+    <string name="op_miscalificaciones_repartidor">Calificaciones</string>
 
     <!---NavigationDrawer Repartidor-->
     <string name="op_inicio_repartidor">Inicio</string>
@@ -34,6 +35,7 @@
 
     <!---Fragments de inicio del Repartidor-->
     <string name="img_repartidor_desc">Imagen del repartidor</string>
+    <string name="btnCompletado">Entrega Completada</string>
 
 
     <!---STRINGS DE CLIENTE-->
@@ -78,6 +80,7 @@
     <!---Fragment para registro de un envío-->
     <string name="titulo_registroEnvio">Registrar envío nuevo</string>
     <string name="datosCliente">Datos del remitente</string>
+    <string name="btnVerEntrega">Ver Envío</string>
 
     <string name="etNombreCompleto">Nombre Completo</string>
     <!--<string name="etTelefonoC">Teléfono</string>-->
@@ -103,6 +106,7 @@
 
     <!---Array de spinners-->
     <string-array name="opciones_peso">
+        <item>Seleccionar</item>
         <item>0.5 kg</item>
         <item>1 kg</item>
         <item>2 kg</item>
@@ -110,6 +114,7 @@
     </string-array>
 
     <string-array name="opciones_piezas">
+        <item>Seleccionar</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -123,6 +128,17 @@
     <string name="datosEnvio">Datos del Envío</string>
     <string name="comentarios">Comentarios</string>
     <string name="calificacion">Calificar</string>
+
+    <!---Detalle Envio Activity-->
+    <string name="detalleEnvio">Detalle del envío</string>
+    <string name="nombreCompletoRemitente">Nombre Remitente</string>
+    <string name="nombreCompletoDestinatario">Nombre Destinatario</string>
+    <string name="direccionCompletaRemitente">Dirección Remitente</string>
+    <string name="direccionCompletaDestinatario">Dirección Destinatario</string>
+    <string name="descripcionCompletaPaquete">Descripción de Paquete</string>
+    <string name="dimencionCompletaPaquete">Dimensiones de paquete</string>
+    <string name="pesoCompletoPaquete">Peso de paquete</string>
+    <string name="piezasCompletasPaquete">Piezas del Paquete</string>
 
 
     <!---STRINGS DE ADMINISTRADOR-->
@@ -156,6 +172,7 @@
     <string name="etTelefonoA">Teléfono</string>
     <string name="etAPassword">Confirmar password</string>
     <string name="btnRegistrarA">Registrarme</string>
+
 
 
 </resources>

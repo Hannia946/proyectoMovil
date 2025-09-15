@@ -26,6 +26,7 @@ class FragmentHistorialEnviosCliente : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val adapter = EnvioAdapter(requireContext(),Datos.solicitudes)
         binding.recyclerHistorial.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerHistorial.adapter = adapter

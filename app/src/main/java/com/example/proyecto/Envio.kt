@@ -28,5 +28,6 @@ class Envio(
     var Largo: String,
     var Alto: String,
     var calificacion: Int? = null,
-    var comentarios: String? = null
+    var comentarios: String? = null,
+    var entregado: Boolean? = false
 )
